@@ -65,7 +65,7 @@ handleClick = (event) => {
         seleccionAnterior: "B"
       })
     }
-    console.log(this.state.eleccion)  //todo NO DA LO MISMO
+    console.log(this.state.eleccion)  //TODO
   }
 
 /* -------------------------------------------------------------------------- */
