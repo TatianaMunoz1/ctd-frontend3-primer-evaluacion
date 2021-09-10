@@ -18,7 +18,7 @@ this.state = {
 }}
 
 /* -------------------------------------------------------------------------- */
-/* ---------------------------Evento click para los botones----------------------------------------------- */
+/* ---------------------------Evento click para los botones------------------ */
 /* -------------------------------------------------------------------------- */
 handleClick = (event) => {
     const btn = event.target;
@@ -29,8 +29,6 @@ handleClick = (event) => {
         contador: 0,
         seleccionAnterior: " ",
       })
-        
-      
     }
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
@@ -39,7 +37,6 @@ handleClick = (event) => {
         contador: this.state.contador + 1,
         seleccionAnterior: "A",
       });
-
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
     }else if(btn.value === "A" && this.state.seleccionAnterior === "A"){
@@ -48,7 +45,6 @@ handleClick = (event) => {
         seleccionAnterior: "A",
 
       })
-    
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
     }else if (btn.value ==="B" && this.state.seleccionAnterior === "A"){
@@ -56,7 +52,6 @@ handleClick = (event) => {
         contador: this.state.contador+3,
         seleccionAnterior: "B"
       })
- 
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
     }else if(btn.value === "B"){
@@ -76,7 +71,6 @@ componentDidUpdate(prevProps,postProps){
  this.state.eleccion.push(this.state.seleccionAnterior)};
 
 }
-
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 render(){
@@ -87,19 +81,13 @@ render(){
       handleClick={this.handleClick}
        opcA = {data[this.state.contador].opciones.a}
        opcB = {data[this.state.contador].opciones.b} />
-
-
      <Recordatorio
      seleccionAnterior = {this.state.seleccionAnterior} 
       eleccion = {this.state.eleccion}
-        
-      
-
       />
   </div>
 
   )
-
 }
 
 }
